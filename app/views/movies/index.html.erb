@@ -1,0 +1,9 @@
+<h1>movies</h1>
+<div class="movie-list">
+    <% @movies.each do |movie| %>
+        <p>タイトル</p>
+        <p><%= movie.name %></p>
+        <div><%= image_tag movie.image_url , class:"movie-img"%></div>
+    <% end %>
+</div>
+
