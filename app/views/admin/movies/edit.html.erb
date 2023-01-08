@@ -1,0 +1,28 @@
+<div class="center">
+    <h2>Edit</h2>
+</div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <%= form_with model: [:admin, @movie] do |f| %>
+                <%= render "shared/error_messages" %>
+                    <%= f.label :name, "タイトル" %>
+                    <%= f.text_field :name, class: 'form-control' %>
+
+                    <%= f.label :year, "公開年" %>
+                    <%= f.text_field :year, class: 'form-control' %>
+
+                    <%= f.label :description, "概要" %>
+                    <%= f.text_area :description, class: 'form-control' %>
+
+                    <%= f.label :image_url, "画像URL" %>
+                    <%= f.text_field :image_url, class: 'form-control' %>
+
+                    <%= f.label :is_showing, "上映中" %>
+                     <br>
+                    <%= f.check_box :is_showing, class: "form-check" %>
+                    <br>
+                    <%= f.submit "Submit"%>
+            <% end %>
+        </div>
+    </div>
+

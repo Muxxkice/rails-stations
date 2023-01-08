@@ -13,7 +13,8 @@
     </tr>
     <% @movies.each do |movie| %>
         <tr class="__items">
-            <td><%= movie.id %></td>
+            <%# <td><%= movie.id %></td> %>
+            <td><%= link_to "#{movie.id}","/admin/movies/#{movie.id}/edit"  %></td>
             <td><%= movie.name %></td>
             <td><%= movie.year %></td>
             <td><%= movie.description %></td>
