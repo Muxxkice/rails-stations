@@ -33,8 +33,9 @@ class Admin::MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @movie.destroy
     flash[:success] = "Deleted"
-    redirect_to "/admin/movies", status: :see_other
+    redirect_to "/admin/movies"
     #redirect_to("/admicn/movies"), status: :see_otherだとだめだった
+    station5,status: :see_otherつけるとexpected the response to have status code 302 but it was 303でエラーでテスト通らなかった。
   end
 
   private

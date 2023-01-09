@@ -25,7 +25,7 @@
             <% end %>
             <div>
             <%= button_to "destroy", admin_movie_path(@movie), method: :delete,
-                                form: { data: { turbo_confirm: "本当に削除しますか？" } } %>
+                                form: { data: { confirm: "本当に削除しますか？"} } %>
             </div>
 
         </div>
