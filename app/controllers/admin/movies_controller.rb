@@ -31,7 +31,10 @@ class Admin::MoviesController < ApplicationController
 
   def destroy
     @movie = Movie.find(params[:id])
+    @movie.destroy
     flash[:success] = "Deleted"
+    redirect_to "/admin/movies", status: :see_other
+    #redirect_to("/admicn/movies"), status: :see_otherだとだめだった
   end
 
   private
