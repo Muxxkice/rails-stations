@@ -1,0 +1,14 @@
+<h1>Sheet</h1>
+
+<% array = @sheets.map{|s|{"r"=> s.row ,"c"=>s.column } }%>
+<% array = array.each_slice(5).to_a %>
+
+<table border="1">
+<% array.each do |a|%>
+    <tr>
+        <% a.each do |s|%>
+            <th><%= "#{s["r"]}-#{s["c"]}" %></th>
+        <% end %>
+        </tr>
+<% end %>
+</table>

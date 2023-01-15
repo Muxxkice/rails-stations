@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # Movie.create([{ name: 'Star Wars' }, { year: '1900' },{description:'宇宙戦争の話'},{image_url:''}])
+
+#映画のサンプルデータ
 Movie.create(
   name: "ハリー・ポッターと賢者の石",
   year: "2001",
@@ -47,3 +49,10 @@ Movie.create(
   created_at: Date.today,
   updated_at: Date.today
 )
+
+#席のマスターデータ
+for i in %w[a b c]
+  for j in 1..5
+    Sheet.create(row: "#{i}", column: "#{j}")
+  end
+end
