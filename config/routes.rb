@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/movies", to: "movies#index"
+  get "/search", to: "movies#search"
   namespace :admin do
     resources :movies
+
     # get "movies", to: "movies#index"
     # post "movies", to: "movies#create"
 
@@ -10,6 +14,4 @@ Rails.application.routes.draw do
     # put "movies/:id", to: "movies#update"
     # delete "movies", to: "movies#destroy"
   end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get "/movies", to: "movies#index"
 end

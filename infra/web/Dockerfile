@@ -1,5 +1,8 @@
 FROM ruby:2.7.3
 RUN apt-get update -qq
+# 変更後↓
+RUN apt-get install -y nodejs npm && npm install n -g && n 16
+# 元↓
 RUN apt-get install -y nodejs npm && npm install n -g && n lts
 RUN npm install -g yarn
 RUN mkdir /app

@@ -1,0 +1,14 @@
+<h2>検索</h2>
+<%= form_with url: search_path, method: :get do |form| %>
+    <%= form.label :keyword, "キーワード" %>
+    <%= form.text_field :keyword %>
+    <%= form.label :is_showing, "すべて" %>
+    <%= form.radio_button :is_showing, "" %>
+    <%= form.label :is_showing, "公開中" %>
+    <%= form.radio_button :is_showing, "1" %>
+    <%= form.label :is_showing, "公開予定" %>
+    <%= form.radio_button :is_showing, "0" %>
+
+    <%= form.submit "検索" %>
+<% end %>
+</div>

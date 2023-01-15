@@ -1,9 +1,14 @@
 <h1>movies</h1>
+
+<div>
+<%= render "shared/serach" %>
+
+
 <div class="movie-list">
     <% @movies.each do |movie| %>
-        <p>タイトル</p>
-        <p><%= movie.name %></p>
         <div><%= image_tag movie.image_url , class:"movie-img"%></div>
+        <p><%= movie.name %></p>
+        <p><%= movie.description %></p>
     <% end %>
 </div>
 
